@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-color: #1a1a1a;
+  font-family: "Raleway", sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  width: 100vw;
+  
+}
+
+.search input[type="search"] {
+  width: 60%;
+  height: 30px;
+  /* padding: 5px; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search button {
+  padding: 5px 20px;
+  height: 30px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e7195a;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: #0056b3;
+}
+.searchBtn i{
+  border: none;
+  padding: 4px 1px;
+}
+
+.container {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.movie {
+  display: flex;
+  flex-direction: column;
+}
+.movie-image {
+  width: 200px;
+}
+.movie-fav {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-title {
+  font-size: 16px;
+  color: #fff;
+
+  width: 200px;
+}
+p {
+  color: #fff;
+}
+.movie-div {
+  width: 200px;
+  box-sizing: border-box;
+  background-color: #000;
+}
+.image-div {
+  position: relative;
+}
+.vote-avarage {
+  border: 1px solid #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ea4a47;
+  color: #fff;
+  right: 2%;
+  top: 2%;
+  position: absolute;
+  z-index: 2;
+  font-size: 12px;
+}
+
+
+
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+i {
+  color: #fff;
+  border: 1px solid #fff;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  font-size: 10px;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 100%;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.watch {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  text-decoration: none;
+  background: #e7195a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 0.7rem;
+  line-height: 0.9;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.watch:hover {
+  background: #ea4a47;
+}
+
+.watch:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+.watch:active {
+  transform: scale(0.99);
+}
+
+
+.favorites{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  visibility: hidden;
+  overflow: scroll;
+}
+
+
+.sidenav{
+  display: flex;
+  background-color: #ffffff;
+  padding-bottom: 20px;
+  overflow: scroll;
+}
+
+
+
+.closebtn {
+  z-index: 200;
+ height: 3vh;
+ text-align: end;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: #ffffff;
+  display: block;
+}
+.closebtn p{
+  color: #000;
+  cursor: pointer;
+}
+
+.sidenav img {
+  width: 150px;
+  margin-right: 10px;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+.genre{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.genreBtn{
+  cursor: pointer;
+  color: #fff;
+  background: none;
+	border: none;
+	padding: 0;
+	outline: inherit;
+  font-size: 1em;
+}
+.genreBtn::after{
+  content: ' ⎮';
+}
+
+
+.high-rating {
+  background-color: green;
+  color: white;
+}
+
+.medium-rating {
+  background-color: orange;
+  color: white;
+}
+
+.low-rating {
+  background-color: red;
+  color: white;
+}
+
+.pages {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+}
+
+.pagination {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.pagination a {
+  color: black;
+  font-size: 12px;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color: rgb(8, 117, 189);
+  color: white;
+  border: 1px solid rgb(8, 117, 189);
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
